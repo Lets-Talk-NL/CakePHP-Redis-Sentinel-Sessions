@@ -1,0 +1,21 @@
+{
+    "name": "letstalk/cakephp-redis-sentinel-sessions",
+    "description": "Store CakePHP sessions in Redis Sentinel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Letstalk\\CakephpRedisSentinelSessions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicky Gerritsen",
+            "email": "nicky@letstalk.nl"
+        }
+    ],
+    "require": {
+        "ext-redis": "*",
+        "cakephp/cakephp": "^3.0 || ^4.0"
+    }
+}
