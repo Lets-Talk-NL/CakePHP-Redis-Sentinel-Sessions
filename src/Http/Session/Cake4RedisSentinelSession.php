@@ -16,7 +16,7 @@ class Cake4RedisSentinelSession implements SessionHandlerInterface
 
     /**
      * @param array $config The configuration to use for this engine
-     *                      It requires the keys 'host' and 'port'. 'database' is optional.
+     *                      It requires the keys 'host' and 'port'. 'database', 'prefix' and 'duration' are optional.
      * @throws InvalidArgumentException if the config is invalid
      */
     public function __construct(array $config = [])
@@ -32,6 +32,7 @@ class Cake4RedisSentinelSession implements SessionHandlerInterface
             'port'     => $port,
             'database' => $config['database'] ?? 0,
             'prefix'   => $config['prefix'] ?? 'session_',
+            'duration' => $config['duration'] ?? HOUR,
         ]);
 
     }
